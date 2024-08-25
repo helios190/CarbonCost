@@ -12,8 +12,8 @@ Once logged in, users can access the **Carbon Credit Cap Calculation** feature, 
 The application also includes a **Carbon Credit Trade** feature, enabling users to buy, sell, or trade carbon credits seamlessly. This marketplace-like environment allows users to manage their carbon credit portfolios effectively. The feature provides real-time updates on market rates, transaction histories, and analytics, ensuring users can make informed decisions. Additionally, secure transaction protocols are in place to protect user data and financial information during trading activities.
 
 Created By : The KBS
-Ketua Kelompok: Bintang Restu Bawono - 
+Ketua Kelompok: Bintang Restu Bawono - 474703
 
 # Anggota 1: Adzkia Khansa Meara - 
-# Anggota 2: Bintang Restu Bawono - 
+# Anggota 2: Bintang Restu Bawono - 474703
 # Anggota 3: Stephanus Edward P. - 
