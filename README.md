@@ -14,6 +14,6 @@ The application also includes a **Carbon Credit Trade** feature, enabling users 
 Created By : The KBS
 Ketua Kelompok: Bintang Restu Bawono - 21/474703/TK/52376
 
-Anggota 1: Adzkia Khansa Meara - 21/473474/TK/52182
-Anggota 2: Bintang Restu Bawono - 21/474703/TK/52376
-Anggota 3: Stephanus Edward P. - 21/473073/TK/52122
+# Anggota 1: Adzkia Khansa Meara - 21/473474/TK/52182
+# Anggota 2: Bintang Restu Bawono - 21/474703/TK/52376
+# Anggota 3: Stephanus Edward P. - 21/473073/TK/52122
