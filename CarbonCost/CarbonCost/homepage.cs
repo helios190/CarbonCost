@@ -17,6 +17,11 @@ namespace CarbonCost
             InitializeComponent();
         }
 
+        public bool Login(string username, string password)
+        {
+            throw new NotImplementedException();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             User employee = new User(tbUsername.Text, tbPassword.Text);
