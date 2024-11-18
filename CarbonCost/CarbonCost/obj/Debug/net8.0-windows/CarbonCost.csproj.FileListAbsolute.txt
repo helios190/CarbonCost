@@ -1,0 +1,17 @@
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\CarbonCost.exe
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\CarbonCost.deps.json
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\CarbonCost.runtimeconfig.json
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\CarbonCost.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\CarbonCost.pdb
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.Form1.resources
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.csproj.GenerateResource.cache
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.AssemblyInfoInputs.cache
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.AssemblyInfo.cs
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.csproj.CoreCompileInputs.cache
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.sourcelink.json
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\refint\CarbonCost.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.pdb
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.genruntimeconfig.cache
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\ref\CarbonCost.dll
