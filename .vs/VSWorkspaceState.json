@@ -2,8 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\CarbonCost",
-    "\\CarbonCost\\CarbonCost"
+    "\\CarbonCost\\CarbonCost",
+    "\\CarbonCost\\CarbonCost\\obj"
   ],
-  "SelectedNode": "\\CarbonCost\\CarbonCost.sln",
   "PreviewInSolutionExplorer": false
 }
