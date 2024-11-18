@@ -11,9 +11,16 @@ namespace CarbonCost
         // Private fields for the class
         private string _username;
         private string _password;
+        private int _empID;
         private bool _twoFactorAuthEnabled;
 
         // Public properties
+
+        public User(string loginName, string password)
+        {
+            Username = loginName;
+            Password = password;
+        }
         public string Username
         {
             get { return _username; }
@@ -25,7 +32,10 @@ namespace CarbonCost
             get { return _password; }
             set { _password = value; }
         }
-
+        public int EmployeeID
+        {
+            get { return _empID; }
+        }
         public bool TwoFactorAuthEnabled
         {
             get { return _twoFactorAuthEnabled; }
@@ -35,41 +45,25 @@ namespace CarbonCost
         // Method for User signup
         public void Signup()
         {
-            Console.Write("Enter a username: ");
-            Username = Console.ReadLine();
 
-            Console.Write("Enter a password: ");
-            Password = Console.ReadLine();
-
-            Console.Write("Enable two-factor authentication? (yes/no): ");
-            string twoFactorInput = Console.ReadLine().ToLower();
-
-            TwoFactorAuthEnabled = twoFactorInput == "yes";
-
-            Console.WriteLine("User signed up successfully.");
         }
 
         // Method for User login
-        public void Login()
+        public bool Login()
         {
-            Console.Write("Enter your username: ");
-            string inputUsername = Console.ReadLine();
-
-            Console.Write("Enter your password: ");
-            string inputPassword = Console.ReadLine();
-
-            if (inputUsername == Username && inputPassword == Password)
+            if (Username == "Jono" & Password == "wkwk")
             {
-                Console.WriteLine("User logged in successfully.");
-                if (TwoFactorAuthEnabled)
-                {
-                    Console.WriteLine("Two-factor authentication is enabled.");
-                    // Here, you could add additional steps for two-factor authentication.
-                }
+                _empID = 1;
+                return true;
+            }
+            else if (Username == "Jones" && Password == "haha")
+            {
+                _empID = 2;
+                return true;
             }
             else
             {
-                Console.WriteLine("Login failed. Incorrect username or password.");
+                return false;
             }
         }
 
