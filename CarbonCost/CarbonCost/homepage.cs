@@ -30,5 +30,10 @@ namespace CarbonCost
                 MessageBox.Show("Login Gagal");
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

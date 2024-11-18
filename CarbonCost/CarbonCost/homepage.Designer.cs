@@ -129,6 +129,7 @@
             linkLabel1.TabIndex = 10;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Register Now";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // homepage
             // 

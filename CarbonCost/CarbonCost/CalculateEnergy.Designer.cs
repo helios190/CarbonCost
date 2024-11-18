@@ -26,66 +26,39 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
-            lblEnergy = new Label();
-            lblTransport = new Label();
-            lblMetric = new Label();
-            tbEnergy = new TextBox();
-            tbTransport = new TextBox();
-            tbMetric = new TextBox();
+            lblUnits = new Label();
+            lblState = new Label();
             btnCalculate = new Button();
             pictureBox1 = new PictureBox();
+            lblCountry = new Label();
+            lblEValue = new Label();
+            cmbElectricityUnit = new ComboBox();
+            cmbCountry = new ComboBox();
+            cmbState = new ComboBox();
+            txtElectricityValue = new TextBox();
+            lblResult = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // lblEnergy
+            // lblUnits
             // 
-            lblEnergy.AutoSize = true;
-            lblEnergy.Location = new Point(360, 142);
-            lblEnergy.Name = "lblEnergy";
-            lblEnergy.Size = new Size(122, 15);
-            lblEnergy.TabIndex = 0;
-            lblEnergy.Text = "Energy Consumption:";
+            lblUnits.AutoSize = true;
+            lblUnits.Location = new Point(371, 108);
+            lblUnits.Name = "lblUnits";
+            lblUnits.Size = new Size(86, 15);
+            lblUnits.TabIndex = 1;
+            lblUnits.Text = "Electricity Unit:";
             // 
-            // lblTransport
+            // lblState
             // 
-            lblTransport.AutoSize = true;
-            lblTransport.Location = new Point(364, 174);
-            lblTransport.Name = "lblTransport";
-            lblTransport.Size = new Size(118, 15);
-            lblTransport.TabIndex = 1;
-            lblTransport.Text = "Transportation Habit:";
-            // 
-            // lblMetric
-            // 
-            lblMetric.AutoSize = true;
-            lblMetric.Location = new Point(371, 210);
-            lblMetric.Name = "lblMetric";
-            lblMetric.Size = new Size(111, 15);
-            lblMetric.TabIndex = 2;
-            lblMetric.Text = "Production Metrics:";
-            // 
-            // tbEnergy
-            // 
-            tbEnergy.Location = new Point(488, 139);
-            tbEnergy.Name = "tbEnergy";
-            tbEnergy.Size = new Size(241, 23);
-            tbEnergy.TabIndex = 3;
-            // 
-            // tbTransport
-            // 
-            tbTransport.Location = new Point(488, 171);
-            tbTransport.Name = "tbTransport";
-            tbTransport.Size = new Size(241, 23);
-            tbTransport.TabIndex = 4;
-            // 
-            // tbMetric
-            // 
-            tbMetric.Location = new Point(488, 207);
-            tbMetric.Name = "tbMetric";
-            tbMetric.Size = new Size(241, 23);
-            tbMetric.TabIndex = 5;
+            lblState.AutoSize = true;
+            lblState.Location = new Point(371, 210);
+            lblState.Name = "lblState";
+            lblState.Size = new Size(93, 15);
+            lblState.TabIndex = 2;
+            lblState.Text = "State (Optional):";
             // 
             // btnCalculate
             // 
@@ -93,7 +66,7 @@
             btnCalculate.Name = "btnCalculate";
             btnCalculate.Size = new Size(75, 23);
             btnCalculate.TabIndex = 6;
-            btnCalculate.Text = "Calculate";
+            btnCalculate.Text = "Next";
             btnCalculate.UseVisualStyleBackColor = true;
             btnCalculate.Click += btnCalculate_Click;
             // 
@@ -107,35 +80,99 @@
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
+            // lblCountry
+            // 
+            lblCountry.AutoSize = true;
+            lblCountry.Location = new Point(371, 177);
+            lblCountry.Name = "lblCountry";
+            lblCountry.Size = new Size(53, 15);
+            lblCountry.TabIndex = 8;
+            lblCountry.Text = "Country:";
+            // 
+            // lblEValue
+            // 
+            lblEValue.AutoSize = true;
+            lblEValue.Location = new Point(371, 143);
+            lblEValue.Name = "lblEValue";
+            lblEValue.Size = new Size(92, 15);
+            lblEValue.TabIndex = 9;
+            lblEValue.Text = "Electricity Value:";
+            // 
+            // cmbElectricityUnit
+            // 
+            cmbElectricityUnit.FormattingEnabled = true;
+            cmbElectricityUnit.Location = new Point(504, 105);
+            cmbElectricityUnit.Name = "cmbElectricityUnit";
+            cmbElectricityUnit.Size = new Size(121, 23);
+            cmbElectricityUnit.TabIndex = 10;
+            // 
+            // cmbCountry
+            // 
+            cmbCountry.FormattingEnabled = true;
+            cmbCountry.Location = new Point(504, 174);
+            cmbCountry.Name = "cmbCountry";
+            cmbCountry.Size = new Size(121, 23);
+            cmbCountry.TabIndex = 11;
+            // 
+            // cmbState
+            // 
+            cmbState.FormattingEnabled = true;
+            cmbState.Location = new Point(504, 207);
+            cmbState.Name = "cmbState";
+            cmbState.Size = new Size(121, 23);
+            cmbState.TabIndex = 12;
+            // 
+            // txtElectricityValue
+            // 
+            txtElectricityValue.Location = new Point(504, 140);
+            txtElectricityValue.Name = "txtElectricityValue";
+            txtElectricityValue.Size = new Size(121, 23);
+            txtElectricityValue.TabIndex = 13;
+            // 
+            // lblResult
+            // 
+            lblResult.AutoSize = true;
+            lblResult.Location = new Point(338, 373);
+            lblResult.Name = "lblResult";
+            lblResult.Size = new Size(42, 15);
+            lblResult.TabIndex = 14;
+            lblResult.Text = "Result:";
+            // 
             // CalculateEnergy
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblResult);
+            Controls.Add(txtElectricityValue);
+            Controls.Add(cmbState);
+            Controls.Add(cmbCountry);
+            Controls.Add(cmbElectricityUnit);
+            Controls.Add(lblEValue);
+            Controls.Add(lblCountry);
             Controls.Add(pictureBox1);
             Controls.Add(btnCalculate);
-            Controls.Add(tbMetric);
-            Controls.Add(tbTransport);
-            Controls.Add(tbEnergy);
-            Controls.Add(lblMetric);
-            Controls.Add(lblTransport);
-            Controls.Add(lblEnergy);
+            Controls.Add(lblState);
+            Controls.Add(lblUnits);
             Name = "CalculateEnergy";
-            Text = "Form1";
+            Text = "Calculate Energy";
+            Load += CalculateEnergy_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label lblEnergy;
-        private Label lblTransport;
-        private Label lblMetric;
-        private TextBox tbEnergy;
-        private TextBox tbTransport;
-        private TextBox tbMetric;
-        private Button btnCalculate;
-        private PictureBox pictureBox1;
+        public Label lblUnits;
+        public Label lblState;
+        public Button btnCalculate;
+        public PictureBox pictureBox1;
+        private Label lblCountry;
+        public Label lblEValue;
+        public ComboBox cmbElectricityUnit;
+        public ComboBox cmbCountry;
+        public ComboBox cmbState;
+        public TextBox txtElectricityValue;
+        public Label lblResult;
     }
 }

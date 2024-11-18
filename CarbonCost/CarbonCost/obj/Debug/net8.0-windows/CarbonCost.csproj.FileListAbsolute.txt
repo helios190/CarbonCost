@@ -3,7 +3,6 @@ C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-
 C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\CarbonCost.runtimeconfig.json
 C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\CarbonCost.dll
 C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\CarbonCost.pdb
-C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.Form1.resources
 C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.csproj.GenerateResource.cache
 C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.AssemblyInfoInputs.cache
@@ -17,3 +16,19 @@ C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-
 C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\ref\CarbonCost.dll
 C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.homepage.resources
 C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.Properties.Resources.resources
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.CalculateEnergy.resources
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.CalculateTransport.resources
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.Register.resources
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\Castle.Core.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\Moq.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\Moq.AutoMock.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\NonBlocking.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\xunit.abstractions.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\xunit.assert.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\xunit.core.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\bin\Debug\net8.0-windows\xunit.execution.dotnet.dll
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.csproj.AssemblyReference.cache
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.csproj.Up2Date

@@ -1,0 +1,6 @@
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost.Test\obj\Debug\net8.0-windows\CarbonCost.Test.csproj.AssemblyReference.cache
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost.Test\obj\Debug\net8.0-windows\CarbonCost.Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost.Test\obj\Debug\net8.0-windows\CarbonCost.Test.AssemblyInfoInputs.cache
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost.Test\obj\Debug\net8.0-windows\CarbonCost.Test.AssemblyInfo.cs
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost.Test\obj\Debug\net8.0-windows\CarbonCost.Test.csproj.CoreCompileInputs.cache
+C:\Users\Khansa\source\repos\CarbonCost1\CarbonCost\CarbonCost.Test\obj\Debug\net8.0-windows\CarbonCost.Test.sourcelink.json
