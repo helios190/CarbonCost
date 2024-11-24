@@ -32,9 +32,7 @@ namespace CarbonCost {
 
         public double CalculationCap()
         {
-            double cap = 0.0;
-
-            cap = (energyConsumption + transportationHabits + ProductionMetrics) / 3;
+            double cap = (energyConsumption + transportationHabits + ProductionMetrics) / 3;
             return cap;
         }
 
