@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Khansa\\source\\repos\\CarbonCost1\\CarbonCost\\CarbonCost\\CarbonCost.csproj": {}
+    "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\CarbonCost.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Khansa\\source\\repos\\CarbonCost1\\CarbonCost\\CarbonCost\\CarbonCost.csproj": {
+    "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\CarbonCost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Khansa\\source\\repos\\CarbonCost1\\CarbonCost\\CarbonCost\\CarbonCost.csproj",
+        "projectUniqueName": "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\CarbonCost.csproj",
         "projectName": "CarbonCost",
-        "projectPath": "C:\\Users\\Khansa\\source\\repos\\CarbonCost1\\CarbonCost\\CarbonCost\\CarbonCost.csproj",
-        "packagesPath": "C:\\Users\\Khansa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Khansa\\source\\repos\\CarbonCost1\\CarbonCost\\CarbonCost\\obj\\",
+        "projectPath": "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\CarbonCost.csproj",
+        "packagesPath": "C:\\Users\\Bintang\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Khansa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bintang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,23 +45,29 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "FastReport.DataVisualization": {
+              "target": "Package",
+              "version": "[2025.1.2, )"
+            },
+            "HIC.System.Windows.Forms.DataVisualization": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.20.72, )"
             },
-            "Moq.AutoMock": {
+            "NUnit": {
               "target": "Package",
-              "version": "[3.5.0, )"
+              "version": "[4.2.2, )"
             },
-            "xunit": {
+            "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[2.9.2, )"
+              "version": "[4.6.0, )"
             },
-            "xunit.runner.visualstudio": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Npgsql": {
               "target": "Package",
-              "version": "[2.8.2, )"
+              "version": "[8.0.5, )"
             }
           },
           "imports": [
@@ -83,7 +89,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
