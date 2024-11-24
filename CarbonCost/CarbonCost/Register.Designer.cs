@@ -46,40 +46,45 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(466, 173);
+            label3.Location = new Point(606, 274);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(60, 15);
+            label3.Size = new Size(91, 25);
             label3.TabIndex = 10;
             label3.Text = "Username";
             // 
             // tbUsername
             // 
-            tbUsername.Location = new Point(466, 191);
+            tbUsername.Location = new Point(606, 304);
+            tbUsername.Margin = new Padding(4, 5, 4, 5);
             tbUsername.Name = "tbUsername";
-            tbUsername.Size = new Size(301, 23);
+            tbUsername.Size = new Size(428, 31);
             tbUsername.TabIndex = 9;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(466, 241);
+            label2.Location = new Point(606, 388);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(87, 25);
             label2.TabIndex = 8;
             label2.Text = "Password";
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(466, 259);
+            tbPassword.Location = new Point(606, 418);
+            tbPassword.Margin = new Padding(4, 5, 4, 5);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(301, 23);
+            tbPassword.Size = new Size(428, 31);
             tbPassword.TabIndex = 7;
             // 
             // btnRegister
             // 
-            btnRegister.Location = new Point(596, 377);
+            btnRegister.Location = new Point(791, 614);
+            btnRegister.Margin = new Padding(4, 5, 4, 5);
             btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(68, 23);
+            btnRegister.Size = new Size(97, 38);
             btnRegister.TabIndex = 6;
             btnRegister.Text = "Register";
             btnRegister.UseVisualStyleBackColor = true;
@@ -88,61 +93,67 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(466, 305);
+            label1.Location = new Point(606, 494);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(104, 15);
+            label1.Size = new Size(156, 25);
             label1.TabIndex = 12;
             label1.Text = "Confirm Password";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(466, 323);
+            textBox1.Location = new Point(606, 524);
+            textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(301, 23);
+            textBox1.Size = new Size(428, 31);
             textBox1.TabIndex = 11;
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(466, 105);
+            lblName.Location = new Point(606, 161);
+            lblName.Margin = new Padding(4, 0, 4, 0);
             lblName.Name = "lblName";
-            lblName.Size = new Size(39, 15);
+            lblName.Size = new Size(59, 25);
             lblName.TabIndex = 14;
             lblName.Text = "Name";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(466, 123);
+            textBox2.Location = new Point(606, 191);
+            textBox2.Margin = new Padding(4, 5, 4, 5);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(301, 23);
+            textBox2.Size = new Size(428, 31);
             textBox2.TabIndex = 13;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-72, -32);
+            pictureBox1.Location = new Point(60, 63);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(509, 505);
+            pictureBox1.Size = new Size(727, 842);
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(526, 68);
+            label4.Location = new Point(691, 99);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(217, 25);
+            label4.Size = new Size(326, 40);
             label4.TabIndex = 16;
             label4.Text = "Register your company!";
             // 
             // Register
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(label4);
-            Controls.Add(pictureBox1);
             Controls.Add(lblName);
             Controls.Add(textBox2);
             Controls.Add(label1);
@@ -152,6 +163,8 @@
             Controls.Add(label2);
             Controls.Add(tbPassword);
             Controls.Add(btnRegister);
+            Controls.Add(pictureBox1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Register";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\CarbonCost.csproj": {}
+    "C:\\Users\\LENOVO\\Downloads\\CarbonCost2\\CarbonCost\\CarbonCost\\CarbonCost.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\CarbonCost.csproj": {
+    "C:\\Users\\LENOVO\\Downloads\\CarbonCost2\\CarbonCost\\CarbonCost\\CarbonCost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\CarbonCost.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Downloads\\CarbonCost2\\CarbonCost\\CarbonCost\\CarbonCost.csproj",
         "projectName": "CarbonCost",
-        "projectPath": "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\CarbonCost.csproj",
-        "packagesPath": "C:\\Users\\Bintang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bintang\\CarbonCost\\CarbonCost\\CarbonCost\\obj\\",
+        "projectPath": "C:\\Users\\LENOVO\\Downloads\\CarbonCost2\\CarbonCost\\CarbonCost\\CarbonCost.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO\\Downloads\\CarbonCost2\\CarbonCost\\CarbonCost\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bintang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,25 +42,14 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
-            "FastReport.DataVisualization": {
-              "target": "Package",
-              "version": "[2025.1.2, )"
-            },
-            "HIC.System.Windows.Forms.DataVisualization": {
-              "target": "Package",
-              "version": "[1.0.1, )"
-            },
-            "Moq": {
-              "target": "Package",
-              "version": "[4.20.72, )"
-            },
             "NUnit": {
               "target": "Package",
               "version": "[4.2.2, )"
@@ -89,7 +82,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

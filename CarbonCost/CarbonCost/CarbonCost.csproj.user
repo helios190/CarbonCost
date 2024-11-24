@@ -4,13 +4,19 @@
     <Compile Update="CalculateEnergy.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CalculateTransport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="homepage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TradingDashboard.cs">
+    <Compile Update="Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TradingPage.cs">
+    <Compile Update="Trading.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
