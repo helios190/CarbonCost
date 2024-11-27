@@ -181,7 +181,7 @@
             // 
             // load
             // 
-            load.Location = new Point(885, 378);
+            load.Location = new Point(885, 426);
             load.Margin = new Padding(4, 5, 4, 5);
             load.Name = "load";
             load.Size = new Size(107, 38);
@@ -204,7 +204,7 @@
             // comboBoxCompany
             // 
             comboBoxCompany.FormattingEnabled = true;
-            comboBoxCompany.Location = new Point(25, 380);
+            comboBoxCompany.Location = new Point(25, 428);
             comboBoxCompany.Margin = new Padding(4, 5, 4, 5);
             comboBoxCompany.Name = "comboBoxCompany";
             comboBoxCompany.Size = new Size(850, 33);
@@ -268,7 +268,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(311, 413);
+            label13.Location = new Point(327, 373);
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
             label13.Size = new Size(399, 48);

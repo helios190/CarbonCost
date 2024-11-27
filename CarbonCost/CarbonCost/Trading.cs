@@ -97,13 +97,13 @@ namespace CarbonCost
                     {
                         if (reader.Read())
                         {
-                            double pricePerCredit = reader.GetDouble(3);  // Get price_per_credit (column 3)
-                            int quota = reader.GetInt32(4);  // Get quota (column 4), as FLOOR ensures it's an integer
+                            double pricePerCredit = reader.GetDouble(3);  
+                            int quota = reader.GetInt32(4);  
                             int excess = reader.GetInt32(0);
 
-                            label7.Text = $"${excess:F2}"; // Set company emissions
-                            label9.Text = $"{quota}";  // Set Quota Label
-                            label10.Text = $"{pricePerCredit:F2}";  // Set Price per Credit Label
+                            label7.Text = $"${excess:F2}"; 
+                            label9.Text = $"{quota}"; 
+                            label10.Text = $"{pricePerCredit:F2}";  
                         }
                     }
                 }
@@ -231,10 +231,24 @@ namespace CarbonCost
                         cmd.Parameters.AddWithValue("@companyId", selectedCompanyId);  // Seller ID (selectedCompanyId is the company the buyer is purchasing from)
                         cmd.ExecuteNonQuery();
 
+                        sql = @"
+                INSERT INTO transactions 
+                (transaction_type, buyer, company_id, amount, total)
+                VALUES 
+                (@transactionType, @buyer, @company_id, @amount, @totalAmount)";
+
+                        cmd = new NpgsqlCommand(sql, conn);
+                        cmd.Parameters.AddWithValue("@transactionType", "Buy");
+                        cmd.Parameters.AddWithValue("@buyer", selectedCompanyId);  // Buyer ID
+                        cmd.Parameters.AddWithValue("@company_id", companyId);  // Seller ID
+                        cmd.Parameters.AddWithValue("@amount", creditAmount);
+                        cmd.Parameters.AddWithValue("@totalAmount", totalCost);
+                        cmd.ExecuteNonQuery();
+
                         // Recalculate new quota for the Buyer (optional, based on new emissions)
                         double newQuota = Math.Floor(newExcess / pricePerCredit);
-                        label7.Text = $"${newExcess:F2}"; // Update emissions label
-                        label9.Text = $"{newQuota:F0}"; // Update quota label
+                        label7.Text = $"${newExcess:F2}";
+                        label9.Text = $"{newQuota:F0}"; 
 
                         conn.Close();
 
@@ -345,6 +359,20 @@ namespace CarbonCost
                         cmd.Parameters.AddWithValue("@companyId", selectedCompanyId);
                         cmd.ExecuteNonQuery();
 
+                        sql = @"
+                INSERT INTO transactions 
+                (transaction_type, buyer, company_id, amount, total)
+                VALUES 
+                (@transactionType, @buyer, @company_id, @amount, @totalAmount)";
+
+                        cmd = new NpgsqlCommand(sql, conn);
+                        cmd.Parameters.AddWithValue("@transactionType", "Sell");
+                        cmd.Parameters.AddWithValue("@buyer", selectedCompanyId);  // Buyer ID
+                        cmd.Parameters.AddWithValue("@company_id", companyId);  // Seller ID
+                        cmd.Parameters.AddWithValue("@amount", creditAmount);
+                        cmd.Parameters.AddWithValue("@totalAmount", totalRevenue);
+                        cmd.ExecuteNonQuery();
+
                         // Calculate the new quota dynamically (and floor the value)
                         double newQuota = Math.Floor(newExcess / pricePerCredit);
 
@@ -437,9 +465,9 @@ private void load_Click(object sender, EventArgs e)
                 {
                     conn.Open();
                     string query = @"
-                SELECT _transaction_id, _transaction_type, _credit_amount, _price_per_credit,_company_id,_buyer
-                FROM st_select_transactions()
-                WHERE _company_id = @companyId";
+                    SELECT transaction_id,transaction_type,company_id,buyer,amount,total
+                    FROM transactions
+                    WHERE company_id = @companyId";
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
