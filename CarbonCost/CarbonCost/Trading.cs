@@ -159,46 +159,107 @@ namespace CarbonCost
             {
                 conn.Open();
 
-                // Get the price per credit for the selected company ID
-                sql = "SELECT price_per_credit FROM carbon_credit WHERE company_id = @companyId";
-                cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@companyId", selectedCompanyId);
-
-                double pricePerCredit = Convert.ToDouble(cmd.ExecuteScalar());
-                if (pricePerCredit <= 0)
-                {
-                    MessageBox.Show("Invalid price per credit for the selected Company ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    conn.Close();
-                    return;
-                }
-
-                // Calculate the total cost
-                double totalCost = creditAmount * pricePerCredit;
-
-                // Update emissions and database
-                companyEmissions += totalCost;
-                label7.Text = $"${companyEmissions:F2}";
-
-                // Decrease quota by 1
+                // SQL query to get the necessary details from the database
                 sql = @"
-                UPDATE carbon_credit 
-                SET credit_amount = credit_amount - @creditAmount 
-                WHERE company_id = @companyId";
+                SELECT 
+                (company_emissions - credit_amount) AS excess, 
+                company_emissions,
+                credit_amount,
+                price_per_credit
+                FROM 
+                carbon_credit cc 
+                JOIN 
+                company c ON c.company_id = cc.company_id 
+                WHERE 
+                c.company_id = @companyId";
 
+                // Prepare the command
                 cmd = new NpgsqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@creditAmount", creditAmount);
-                cmd.Parameters.AddWithValue("@companyId", selectedCompanyId);
-                cmd.ExecuteNonQuery();
+                cmd.Parameters.AddWithValue("@companyId", companyId);
 
-                RefreshCarbonCreditGrid();
-                MessageBox.Show("Purchase successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                conn.Close();
+                // Execute the command and get the data reader
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Read the values from the reader
+                        double pricePerCredit = reader.GetDouble(3);  // price_per_credit (4th column)
+                        double companyEmissions = reader.GetDouble(1);  // company_emissions (2nd column)
+                        double credits = reader.GetDouble(2);
+                        double excess = reader.GetDouble(0);
+
+                        // Check if there's enough emissions or credits
+                        if (excess <= 0)
+                        {
+                            MessageBox.Show("Insufficient credits available for purchase.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            conn.Close();
+                            return;
+                        }
+
+                        // Calculate the total cost
+                        double totalCost = creditAmount * pricePerCredit;
+
+                        // Update emissions for the Buyer (increase emissions by the total cost)
+                        companyEmissions += totalCost;
+                        double newExcess = companyEmissions - credits;
+
+                        // Close the connection after the first read
+                        conn.Close();
+
+                        // Reopen the connection for the second command
+                        conn.Open();
+
+                        // Update the Buyer’s emissions (company_emissions for the buyer)
+                        sql = @"
+                        UPDATE company 
+                        SET company_emissions = company_emissions + @totalCost 
+                        WHERE company_id = @companyId";
+
+                        cmd = new NpgsqlCommand(sql, conn);
+                        cmd.Parameters.AddWithValue("@totalCost", totalCost);
+                        cmd.Parameters.AddWithValue("@companyId", companyId);  // Buyer ID (this.companyId is the current user's company ID)
+                        cmd.ExecuteNonQuery();
+
+                        // Update the Seller’s credit amount (reduce credits for the seller)
+                        sql = @"
+                        UPDATE company 
+                        SET company_emissions = company_emissions - @totalCost 
+                        WHERE company_id = @companyId";
+
+                        cmd = new NpgsqlCommand(sql, conn);
+                        cmd.Parameters.AddWithValue("@totalCost", totalCost); // Deduct purchased credits
+                        cmd.Parameters.AddWithValue("@companyId", selectedCompanyId);  // Seller ID (selectedCompanyId is the company the buyer is purchasing from)
+                        cmd.ExecuteNonQuery();
+
+                        // Recalculate new quota for the Buyer (optional, based on new emissions)
+                        double newQuota = Math.Floor(newExcess / pricePerCredit);
+                        label7.Text = $"${newExcess:F2}"; // Update emissions label
+                        label9.Text = $"{newQuota:F0}"; // Update quota label
+
+                        conn.Close();
+
+                        // Refresh the grid after the purchase
+                        RefreshCarbonCreditGrid();
+
+                        MessageBox.Show("Purchase successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Handle the case where no data was found
+                        MessageBox.Show("No data found for the selected Company ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        conn.Close();
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+
+
 
         private void btnSell_Click(object sender, EventArgs e)
         {
@@ -222,7 +283,7 @@ namespace CarbonCost
                 // Get the price per credit, excess, and quota for the selected company ID
                 sql = @"
             SELECT 
-                CAST((company_emissions - credit_amount) AS INTEGER) AS excess, 
+                (company_emissions - credit_amount) AS excess, 
                 company_emissions,
                 credit_amount,
                 price_per_credit
@@ -242,9 +303,11 @@ namespace CarbonCost
                     {
                         double pricePerCredit = reader.GetDouble(3); // Get price per credit (column 3)
                         double companyEmissions = reader.GetDouble(1); // Get company emissions (column 1)
+                        double credits = reader.GetDouble(2);
+                        double excess = reader.GetDouble(0);
 
                         // Check if there is enough emissions for the sale
-                        if (companyEmissions <= 0)
+                        if (excess <= 0)
                         {
                             MessageBox.Show("Emissions are zero or negative. Cannot proceed with the sale.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             conn.Close();  // Close the connection if there's an issue
@@ -254,9 +317,11 @@ namespace CarbonCost
                         // Calculate total revenue from the credit sale
                         double totalRevenue = creditAmount * pricePerCredit;
                         double newCompanyEmissions = companyEmissions - totalRevenue; // Calculate new emissions after the sale
+                        double newExcess = newCompanyEmissions - credits;
+
 
                         // Check if the new emissions would be negative
-                        if (newCompanyEmissions < 0)
+                        if (newExcess < 0)
                         {
                             MessageBox.Show("Selling this amount will result in negative emissions. Cannot proceed.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             conn.Close();  // Close the connection if emissions would be negative
@@ -281,7 +346,7 @@ namespace CarbonCost
                         cmd.ExecuteNonQuery();
 
                         // Calculate the new quota dynamically (and floor the value)
-                        double newQuota = Math.Floor(newCompanyEmissions / pricePerCredit);
+                        double newQuota = Math.Floor(newExcess / pricePerCredit);
 
                         // Close the connection after updates
                         conn.Close();
@@ -290,7 +355,7 @@ namespace CarbonCost
                         RefreshCarbonCreditGrid();  // Method to refresh the grid with the updated data
 
                         // Update the emissions label on UI
-                        label7.Text = $"${newCompanyEmissions:F2}";  // Update with the new emissions value
+                        label7.Text = $"${newExcess:F2}";  // Update with the new emissions value
 
                         // Update Label9 with new quota information
                         label9.Text = $"{newQuota:F0}"; // Update label9 with the new quota value
@@ -314,14 +379,6 @@ namespace CarbonCost
                 conn.Close();  // Ensure the connection is closed if an error occurs
             }
         }
-
-
-
-
-
-
-
-
 
         private void RefreshCarbonCreditGrid()
         {
