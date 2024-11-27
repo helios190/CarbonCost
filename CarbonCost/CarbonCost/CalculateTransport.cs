@@ -16,5 +16,10 @@ namespace CarbonCost
         {
             InitializeComponent();
         }
+
+        private void CalculateTransport_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

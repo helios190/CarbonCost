@@ -38,9 +38,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._7_calculator_png_image;
-            pictureBox1.Location = new Point(39, 71);
+            pictureBox1.Location = new Point(56, 118);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(207, 219);
+            pictureBox1.Size = new Size(296, 365);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 8;
             pictureBox1.TabStop = false;
@@ -48,9 +49,10 @@
             // cbFlight
             // 
             cbFlight.AutoSize = true;
-            cbFlight.Location = new Point(363, 101);
+            cbFlight.Location = new Point(563, 150);
+            cbFlight.Margin = new Padding(4, 5, 4, 5);
             cbFlight.Name = "cbFlight";
-            cbFlight.Size = new Size(56, 19);
+            cbFlight.Size = new Size(82, 29);
             cbFlight.TabIndex = 9;
             cbFlight.Text = "Flight";
             cbFlight.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // cbShipping
             // 
             cbShipping.AutoSize = true;
-            cbShipping.Location = new Point(451, 101);
+            cbShipping.Location = new Point(688, 150);
+            cbShipping.Margin = new Padding(4, 5, 4, 5);
             cbShipping.Name = "cbShipping";
-            cbShipping.Size = new Size(73, 19);
+            cbShipping.Size = new Size(109, 29);
             cbShipping.TabIndex = 10;
             cbShipping.Text = "Shipping";
             cbShipping.UseVisualStyleBackColor = true;
@@ -68,24 +71,27 @@
             // cbVehicle
             // 
             cbVehicle.AutoSize = true;
-            cbVehicle.Location = new Point(561, 101);
+            cbVehicle.Location = new Point(845, 150);
+            cbVehicle.Margin = new Padding(4, 5, 4, 5);
             cbVehicle.Name = "cbVehicle";
-            cbVehicle.Size = new Size(63, 19);
+            cbVehicle.Size = new Size(92, 29);
             cbVehicle.TabIndex = 11;
             cbVehicle.Text = "Vehicle";
             cbVehicle.UseVisualStyleBackColor = true;
             // 
             // CalculateTransport
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(cbVehicle);
             Controls.Add(cbShipping);
             Controls.Add(cbFlight);
             Controls.Add(pictureBox1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "CalculateTransport";
             Text = "Calculate Transport";
+            Load += CalculateTransport_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

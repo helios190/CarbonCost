@@ -35,96 +35,78 @@
             tbTransport = new TextBox();
             tbMetric = new TextBox();
             btnCalculate = new Button();
-            pictureBox1 = new PictureBox();
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblEnergy
             // 
             lblEnergy.AutoSize = true;
-            lblEnergy.Location = new Point(360, 142);
+            lblEnergy.Location = new Point(514, 237);
+            lblEnergy.Margin = new Padding(4, 0, 4, 0);
             lblEnergy.Name = "lblEnergy";
-            lblEnergy.Size = new Size(122, 15);
+            lblEnergy.Size = new Size(183, 25);
             lblEnergy.TabIndex = 0;
             lblEnergy.Text = "Energy Consumption:";
             // 
             // lblTransport
             // 
             lblTransport.AutoSize = true;
-            lblTransport.Location = new Point(364, 174);
+            lblTransport.Location = new Point(520, 290);
+            lblTransport.Margin = new Padding(4, 0, 4, 0);
             lblTransport.Name = "lblTransport";
-            lblTransport.Size = new Size(118, 15);
+            lblTransport.Size = new Size(178, 25);
             lblTransport.TabIndex = 1;
             lblTransport.Text = "Transportation Habit:";
             // 
             // lblMetric
             // 
             lblMetric.AutoSize = true;
-            lblMetric.Location = new Point(371, 210);
+            lblMetric.Location = new Point(530, 350);
+            lblMetric.Margin = new Padding(4, 0, 4, 0);
             lblMetric.Name = "lblMetric";
-            lblMetric.Size = new Size(111, 15);
+            lblMetric.Size = new Size(165, 25);
             lblMetric.TabIndex = 2;
             lblMetric.Text = "Production Metrics:";
             // 
             // tbEnergy
             // 
-            tbEnergy.Location = new Point(488, 139);
+            tbEnergy.Location = new Point(697, 232);
+            tbEnergy.Margin = new Padding(4, 5, 4, 5);
             tbEnergy.Name = "tbEnergy";
-            tbEnergy.Size = new Size(241, 23);
+            tbEnergy.Size = new Size(343, 31);
             tbEnergy.TabIndex = 3;
             // 
             // tbTransport
             // 
-            tbTransport.Location = new Point(488, 171);
+            tbTransport.Location = new Point(697, 285);
+            tbTransport.Margin = new Padding(4, 5, 4, 5);
             tbTransport.Name = "tbTransport";
-            tbTransport.Size = new Size(241, 23);
+            tbTransport.Size = new Size(343, 31);
             tbTransport.TabIndex = 4;
             // 
             // tbMetric
             // 
-            tbMetric.Location = new Point(488, 207);
+            tbMetric.Location = new Point(697, 345);
+            tbMetric.Margin = new Padding(4, 5, 4, 5);
             tbMetric.Name = "tbMetric";
-            tbMetric.Size = new Size(241, 23);
+            tbMetric.Size = new Size(343, 31);
             tbMetric.TabIndex = 5;
             // 
             // btnCalculate
             // 
-            btnCalculate.Location = new Point(521, 252);
+            btnCalculate.Location = new Point(744, 420);
+            btnCalculate.Margin = new Padding(4, 5, 4, 5);
             btnCalculate.Name = "btnCalculate";
-            btnCalculate.Size = new Size(75, 23);
+            btnCalculate.Size = new Size(107, 38);
             btnCalculate.TabIndex = 6;
             btnCalculate.Text = "Calculate";
             btnCalculate.UseVisualStyleBackColor = true;
             btnCalculate.Click += btnCalculate_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources._7_calculator_png_image;
-            pictureBox1.Location = new Point(96, 89);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(207, 219);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(340, 351);
-            button1.Name = "button1";
-            button1.Size = new Size(120, 58);
-            button1.TabIndex = 8;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // CalculateEnergy
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(1143, 750);
             Controls.Add(btnCalculate);
             Controls.Add(tbMetric);
             Controls.Add(tbTransport);
@@ -132,10 +114,10 @@
             Controls.Add(lblMetric);
             Controls.Add(lblTransport);
             Controls.Add(lblEnergy);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "CalculateEnergy";
             Text = "Form1";
             Load += CalculateEnergy_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,7 +131,5 @@
         private TextBox tbTransport;
         private TextBox tbMetric;
         private Button btnCalculate;
-        private PictureBox pictureBox1;
-        private Button button1;
     }
 }

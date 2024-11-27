@@ -155,3 +155,4 @@ C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCost\bin\Debug\net8.0-win
 C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.csproj.Up2Date
 C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.genruntimeconfig.cache
 C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\ref\CarbonCost.dll
+C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCost\obj\Debug\net8.0-windows\CarbonCost.Form2.resources

@@ -44,17 +44,19 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(502, 354);
+            label1.Location = new Point(717, 590);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(146, 15);
+            label1.Size = new Size(222, 25);
             label1.TabIndex = 0;
             label1.Text = "Do not have an Account ? ";
             // 
             // button1
             // 
-            button1.Location = new Point(457, 275);
+            button1.Location = new Point(653, 458);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(301, 35);
+            button1.Size = new Size(430, 58);
             button1.TabIndex = 1;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = true;
@@ -62,42 +64,49 @@
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(457, 219);
+            tbPassword.Location = new Point(653, 365);
+            tbPassword.Margin = new Padding(4, 5, 4, 5);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(301, 23);
+            tbPassword.Size = new Size(428, 31);
             tbPassword.TabIndex = 2;
+            tbPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(457, 201);
+            label2.Location = new Point(653, 335);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(87, 25);
             label2.TabIndex = 3;
             label2.Text = "Password";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(457, 132);
+            label3.Location = new Point(653, 220);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(60, 15);
+            label3.Size = new Size(91, 25);
             label3.TabIndex = 5;
             label3.Text = "Username";
             // 
             // tbUsername
             // 
-            tbUsername.Location = new Point(457, 150);
+            tbUsername.Location = new Point(653, 250);
+            tbUsername.Margin = new Padding(4, 5, 4, 5);
             tbUsername.Name = "tbUsername";
-            tbUsername.Size = new Size(301, 23);
+            tbUsername.Size = new Size(428, 31);
             tbUsername.TabIndex = 4;
+            tbUsername.TextChanged += tbUsername_TextChanged;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.R;
-            pictureBox2.Location = new Point(28, 54);
+            pictureBox2.Location = new Point(40, 90);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(386, 351);
+            pictureBox2.Size = new Size(551, 585);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -105,27 +114,30 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(679, 421);
+            label4.Location = new Point(970, 702);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(0, 15);
+            label4.Size = new Size(0, 25);
             label4.TabIndex = 8;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Franklin Gothic Heavy", 36F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(457, 54);
+            label5.Location = new Point(653, 90);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(301, 61);
+            label5.Size = new Size(452, 91);
             label5.TabIndex = 9;
             label5.Text = "Carbon Cost";
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(641, 354);
+            linkLabel1.Location = new Point(916, 590);
+            linkLabel1.Margin = new Padding(4, 0, 4, 0);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(77, 15);
+            linkLabel1.Size = new Size(117, 25);
             linkLabel1.TabIndex = 10;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Register Now";
@@ -133,9 +145,9 @@
             // 
             // homepage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(linkLabel1);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -146,8 +158,10 @@
             Controls.Add(tbPassword);
             Controls.Add(button1);
             Controls.Add(label1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "homepage";
             Text = "homepage";
+            Load += homepage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
