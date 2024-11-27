@@ -280,8 +280,8 @@ namespace CarbonCost
                         cmd.Parameters.AddWithValue("@companyId", selectedCompanyId);
                         cmd.ExecuteNonQuery();
 
-                        // Calculate the new quota dynamically (no database update needed)
-                        double newQuota = newCompanyEmissions / pricePerCredit;
+                        // Calculate the new quota dynamically (and floor the value)
+                        double newQuota = Math.Floor(newCompanyEmissions / pricePerCredit);
 
                         // Close the connection after updates
                         conn.Close();
@@ -292,8 +292,13 @@ namespace CarbonCost
                         // Update the emissions label on UI
                         label7.Text = $"${newCompanyEmissions:F2}";  // Update with the new emissions value
 
-                        // Display the new quota dynamically on the UI
-                        MessageBox.Show($"Sale successful! New Quota: {newQuota:F2}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Update Label9 with new quota information
+                        label9.Text = $"{newQuota:F0}"; // Update label9 with the new quota value
+
+                        // Ensure the UI refreshes correctly after all updates
+                        this.Refresh(); // This will refresh the entire form, forcing UI controls to update
+
+                        MessageBox.Show("Sale successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -309,6 +314,7 @@ namespace CarbonCost
                 conn.Close();  // Ensure the connection is closed if an error occurs
             }
         }
+
 
 
 
