@@ -97,13 +97,13 @@ namespace CarbonCost
                     {
                         if (reader.Read())
                         {
-                            double pricePerCredit = reader.GetDouble(3);  
-                            int quota = reader.GetInt32(4);  
+                            double pricePerCredit = reader.GetDouble(3);
+                            int quota = reader.GetInt32(4);
                             int excess = reader.GetInt32(0);
 
-                            label7.Text = $"${excess:F2}"; 
-                            label9.Text = $"{quota}"; 
-                            label10.Text = $"{pricePerCredit:F2}";  
+                            label7.Text = $"${excess:F2}";
+                            label9.Text = $"{quota}";
+                            label10.Text = $"{pricePerCredit:F2}";
                         }
                     }
                 }
@@ -248,7 +248,7 @@ namespace CarbonCost
                         // Recalculate new quota for the Buyer (optional, based on new emissions)
                         double newQuota = Math.Floor(newExcess / pricePerCredit);
                         label7.Text = $"${newExcess:F2}";
-                        label9.Text = $"{newQuota:F0}"; 
+                        label9.Text = $"{newQuota:F0}";
 
                         conn.Close();
 
@@ -443,7 +443,7 @@ namespace CarbonCost
 
 
 
-private void load_Click(object sender, EventArgs e)
+        private void load_Click(object sender, EventArgs e)
         {
             if (comboBoxCompany.SelectedItem == null)
             {
@@ -498,6 +498,11 @@ private void load_Click(object sender, EventArgs e)
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

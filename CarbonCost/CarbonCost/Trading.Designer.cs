@@ -49,13 +49,16 @@
             label11 = new Label();
             label12 = new Label();
             label13 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(55, 34);
             label1.Margin = new Padding(4, 0, 4, 0);
@@ -63,6 +66,7 @@
             label1.Size = new Size(467, 48);
             label1.TabIndex = 7;
             label1.Text = "Company Profile and Limit";
+            label1.Click += label1_Click;
             // 
             // label7
             // 
@@ -275,6 +279,16 @@
             label13.TabIndex = 35;
             label13.Text = "Historical Transactions";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Cover;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1020, 747);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 36;
+            pictureBox1.TabStop = false;
+            // 
             // Trading
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -301,11 +315,13 @@
             Controls.Add(label4);
             Controls.Add(label5);
             Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Name = "Trading";
             Text = "Trading";
             Load += Trading_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -333,5 +349,6 @@
         private Label label11;
         private Label label12;
         private Label label13;
+        private PictureBox pictureBox1;
     }
 }
