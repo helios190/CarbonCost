@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CCTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17d324101c2284c4863e5f7534a39fb33d8ae985")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bf1e48e0382f7737825eeeeb62e979957b174e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("CCTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CCTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

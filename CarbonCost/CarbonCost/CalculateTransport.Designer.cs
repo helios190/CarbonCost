@@ -28,80 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculateTransport));
+            label2 = new Label();
+            pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            cbFlight = new CheckBox();
-            cbShipping = new CheckBox();
-            cbVehicle = new CheckBox();
+            label3 = new Label();
+            label5 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.DarkGreen;
+            label2.Location = new Point(568, -749);
+            label2.Name = "label2";
+            label2.Size = new Size(902, 2175);
+            label2.TabIndex = 15;
+            label2.Text = resources.GetString("label2.Text");
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.DarkGreen;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(570, 238);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(629, 515);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 16;
+            pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources._7_calculator_png_image;
-            pictureBox1.Location = new Point(56, 118);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-2, 50);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(296, 365);
+            pictureBox1.Size = new Size(573, 427);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 8;
+            pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
             // 
-            // cbFlight
+            // label3
             // 
-            cbFlight.AutoSize = true;
-            cbFlight.Location = new Point(563, 150);
-            cbFlight.Margin = new Padding(4, 5, 4, 5);
-            cbFlight.Name = "cbFlight";
-            cbFlight.Size = new Size(82, 29);
-            cbFlight.TabIndex = 9;
-            cbFlight.Text = "Flight";
-            cbFlight.UseVisualStyleBackColor = true;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(82, 444);
+            label3.Name = "label3";
+            label3.Size = new Size(428, 90);
+            label3.TabIndex = 17;
+            label3.Text = "Calculate your most recent \r\nCarbon Emission Now!";
+            label3.TextAlign = ContentAlignment.TopCenter;
             // 
-            // cbShipping
+            // label5
             // 
-            cbShipping.AutoSize = true;
-            cbShipping.Location = new Point(688, 150);
-            cbShipping.Margin = new Padding(4, 5, 4, 5);
-            cbShipping.Name = "cbShipping";
-            cbShipping.Size = new Size(109, 29);
-            cbShipping.TabIndex = 10;
-            cbShipping.Text = "Shipping";
-            cbShipping.UseVisualStyleBackColor = true;
-            // 
-            // cbVehicle
-            // 
-            cbVehicle.AutoSize = true;
-            cbVehicle.Location = new Point(845, 150);
-            cbVehicle.Margin = new Padding(4, 5, 4, 5);
-            cbVehicle.Name = "cbVehicle";
-            cbVehicle.Size = new Size(92, 29);
-            cbVehicle.TabIndex = 11;
-            cbVehicle.Text = "Vehicle";
-            cbVehicle.UseVisualStyleBackColor = true;
+            label5.AutoSize = true;
+            label5.BackColor = Color.DarkGreen;
+            label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ButtonHighlight;
+            label5.Location = new Point(125, 565);
+            label5.Name = "label5";
+            label5.Size = new Size(337, 84);
+            label5.TabIndex = 19;
+            label5.Text = "Calculating through 2 considerations:\r\n1.) Electricity Consumption\r\n2.) Travel Habits";
+            label5.TextAlign = ContentAlignment.TopCenter;
             // 
             // CalculateTransport
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(1143, 750);
-            Controls.Add(cbVehicle);
-            Controls.Add(cbShipping);
-            Controls.Add(cbFlight);
+            Controls.Add(label5);
+            Controls.Add(label3);
+            Controls.Add(pictureBox2);
+            Controls.Add(label2);
             Controls.Add(pictureBox1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "CalculateTransport";
             Text = "Calculate Transport";
             Load += CalculateTransport_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
+        private Label label2;
+        private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private CheckBox cbFlight;
-        private CheckBox cbShipping;
-        private CheckBox cbVehicle;
+        private Label label3;
+        private Label label5;
     }
 }
