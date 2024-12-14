@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarbonCost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a123eb4bd38f1d774968d6f7eb50c6b9311e17e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a20e2d3d5151a6574f516dfd93e779510b96b5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarbonCost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarbonCost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
