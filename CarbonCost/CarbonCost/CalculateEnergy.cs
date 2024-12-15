@@ -15,42 +15,47 @@ namespace CarbonCost
         }
 
 
-        private void btnCalculate_Click_1(object sender, EventArgs e)
+        private async void btnCalculate_Click_1(object sender, EventArgs e)
         {
             try
             {
                 if (tabControl.SelectedTab.Text == "Electricity Consumption")
                 {
                     // Electricity Emission Calculation
-                    await CalculateElectricityEmissionsAsync();
+                    double electricity = await CalculateElectricityEmissionsAsync();
+                    label27.Text = $"{electricity}";
+                   
                 }
                 else if (tabControl.SelectedTab.Text == "Shipping Habits")
                 {
                     // Shipping Emission Calculation
-                    await CalculateShippingEmissionsAsync();
+                    double shippingResult = await CalculateShippingEmissionsAsync();
+                    label28.Text = $"{shippingResult}";
                 }
                 else if (tabControl.SelectedTab.Text == "Fuel Combustion")
                 {
                     // Fuel Combustion Emission Calculation
-                    await CalculateFuelCombustionEmissionsAsync();
+                    double fuel = await CalculateFuelCombustionEmissionsAsync();
+                    label25.Text = $"{fuel}";
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+
         #region Electricity Emissions
-        private async System.Threading.Tasks.Task CalculateElectricityEmissionsAsync()
+        private async System.Threading.Tasks.Task<double> CalculateElectricityEmissionsAsync()
         {
             if (!ValidateInput(txtElectricityValue.Text, out double value) ||
                 cmbElectricityUnit.SelectedItem == null ||
                 cmbCountry.SelectedItem == null)
             {
                 ShowInputError();
-                return;
+                return 0;
             }
 
             string unit = cmbElectricityUnit.SelectedItem.ToString();
@@ -59,18 +64,19 @@ namespace CarbonCost
 
             // API Service Call
             var result = await _apiServices.GetElectricityEmissionsAsync(unit, value, country, state);
+            return result;
         }
         #endregion
 
         #region Shipping Emissions
-        private async System.Threading.Tasks.Task CalculateShippingEmissionsAsync()
+        private async System.Threading.Tasks.Task<double> CalculateShippingEmissionsAsync()
         {
             if (!ValidateInput(txtWeightValue.Text, out double weight) ||
                 !ValidateInput(txtDistanceValue.Text, out double distance) ||
                 cbTransport.SelectedItem == null)
             {
                 ShowInputError();
-                return;
+                return 0; // Return a default value in case of validation failure
             }
 
             string transport = cbTransport.SelectedItem.ToString();
@@ -79,19 +85,21 @@ namespace CarbonCost
 
             // API Service Call
             var result = await _apiServices.GetShippingEmissionsAsync(weight, weightUnit, distance, distanceUnit, transport);
-            //lblResult.Text = $"Shipping Carbon Emissions:\n {result} kg CO2";
+            return result; // Now properly returning the result
         }
+
+            //lblResult.Text = $"Shipping Carbon Emissions:\n {result} kg CO2";
         #endregion
 
         #region Fuel Combustion Emissions
-        private async System.Threading.Tasks.Task CalculateFuelCombustionEmissionsAsync()
+        private async System.Threading.Tasks.Task<double> CalculateFuelCombustionEmissionsAsync()
         {
             if (!ValidateInput(txtValueFuel.Text, out double quantity) ||
                 cbSource.SelectedItem == null ||
                 cbFuelUnit.SelectedItem == null)
             {
                 ShowInputError();
-                return;
+                return 0 ;
             }
 
             string fuelType = ((KeyValuePair<string, string>)cbSource.SelectedItem).Value;
@@ -99,6 +107,7 @@ namespace CarbonCost
 
             // API Service Call
             var result = await _apiServices.GetFuelCombustionEmissionsAsync(fuelType, quantity, unit);
+            return result;
             //lblResult.Text = $"Fuel Combustion Carbon Emissions: {result} kg CO2";
         }
         #endregion
@@ -246,5 +255,9 @@ namespace CarbonCost
             cmbState.SelectedIndex = 0;
         }
 
+        private void cbTransport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

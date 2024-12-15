@@ -59,6 +59,8 @@
             cbSource = new ComboBox();
             label21 = new Label();
             txtValueFuel = new TextBox();
+            pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
             Electricity = new TabPage();
             cmbElectricityUnit = new ComboBox();
             txtElectricityValue = new TextBox();
@@ -72,25 +74,38 @@
             label9 = new Label();
             pictureBox3 = new PictureBox();
             btnCalculate = new Button();
-            pictureBox6 = new PictureBox();
-            pictureBox7 = new PictureBox();
+            label22 = new Label();
+            label23 = new Label();
+            label24 = new Label();
+            label28 = new Label();
+            label25 = new Label();
+            label26 = new Label();
+            label27 = new Label();
+            label29 = new Label();
+            label30 = new Label();
+            label31 = new Label();
+            label32 = new Label();
+            button1 = new Button();
+            label33 = new Label();
+            label34 = new Label();
+            label35 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl.SuspendLayout();
             Shipping.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             FuelCombustion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             Electricity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-1, 32);
+            pictureBox1.Location = new Point(0, -2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(573, 427);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -101,7 +116,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(84, 426);
+            label3.Location = new Point(89, 366);
             label3.Name = "label3";
             label3.Size = new Size(428, 90);
             label3.TabIndex = 16;
@@ -114,11 +129,11 @@
             label5.BackColor = Color.DarkGreen;
             label5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Location = new Point(123, 530);
+            label5.Location = new Point(107, 502);
             label5.Name = "label5";
-            label5.Size = new Size(337, 112);
+            label5.Size = new Size(152, 28);
             label5.TabIndex = 18;
-            label5.Text = "Calculating through 3 considerations:\r\n1.) Electricity Consumption\r\n2.) Shipping Habits\r\n3.) Fuel Combustion";
+            label5.Text = "Shipping Habits";
             label5.TextAlign = ContentAlignment.TopCenter;
             // 
             // tabControl
@@ -225,6 +240,7 @@
             cbTransport.Name = "cbTransport";
             cbTransport.Size = new Size(319, 33);
             cbTransport.TabIndex = 39;
+            cbTransport.SelectedIndexChanged += cbTransport_SelectedIndexChanged;
             // 
             // cbDistanceUnit
             // 
@@ -436,6 +452,26 @@
             txtValueFuel.Size = new Size(319, 31);
             txtValueFuel.TabIndex = 40;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(119, 458);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(377, 245);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 47;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(-18, 3);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(656, 169);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 30;
+            pictureBox7.TabStop = false;
+            // 
             // Electricity
             // 
             Electricity.BackColor = Color.PaleGoldenrod;
@@ -570,7 +606,7 @@
             // btnCalculate
             // 
             btnCalculate.BackColor = Color.YellowGreen;
-            btnCalculate.Location = new Point(220, 671);
+            btnCalculate.Location = new Point(244, 458);
             btnCalculate.Margin = new Padding(4, 5, 4, 5);
             btnCalculate.Name = "btnCalculate";
             btnCalculate.Size = new Size(107, 36);
@@ -579,25 +615,198 @@
             btnCalculate.UseVisualStyleBackColor = false;
             btnCalculate.Click += btnCalculate_Click_1;
             // 
-            // pictureBox6
+            // label22
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(119, 458);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(377, 245);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 47;
-            pictureBox6.TabStop = false;
+            label22.AutoSize = true;
+            label22.BackColor = Color.DarkGreen;
+            label22.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label22.ForeColor = SystemColors.ButtonHighlight;
+            label22.Location = new Point(99, 556);
+            label22.Name = "label22";
+            label22.Size = new Size(160, 28);
+            label22.TabIndex = 30;
+            label22.Text = "Fuel Combustion";
+            label22.TextAlign = ContentAlignment.TopCenter;
             // 
-            // pictureBox7
+            // label23
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(-18, 3);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(656, 169);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 30;
-            pictureBox7.TabStop = false;
+            label23.AutoSize = true;
+            label23.BackColor = Color.DarkGreen;
+            label23.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label23.ForeColor = SystemColors.ButtonHighlight;
+            label23.Location = new Point(40, 606);
+            label23.Name = "label23";
+            label23.Size = new Size(219, 28);
+            label23.TabIndex = 31;
+            label23.Text = "Electricity Consumption";
+            label23.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.BackColor = Color.DarkGreen;
+            label24.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label24.ForeColor = SystemColors.ButtonHighlight;
+            label24.Location = new Point(95, 680);
+            label24.Name = "label24";
+            label24.Size = new Size(164, 28);
+            label24.TabIndex = 32;
+            label24.Text = "Total Carbon Fuel";
+            label24.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.BackColor = Color.DarkGreen;
+            label28.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label28.ForeColor = SystemColors.ButtonHighlight;
+            label28.Location = new Point(303, 502);
+            label28.Name = "label28";
+            label28.Size = new Size(23, 28);
+            label28.TabIndex = 33;
+            label28.Text = "0";
+            label28.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.BackColor = Color.DarkGreen;
+            label25.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label25.ForeColor = SystemColors.ButtonHighlight;
+            label25.Location = new Point(303, 556);
+            label25.Name = "label25";
+            label25.Size = new Size(23, 28);
+            label25.TabIndex = 34;
+            label25.Text = "0";
+            label25.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.BackColor = Color.DarkGreen;
+            label26.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label26.ForeColor = SystemColors.ButtonHighlight;
+            label26.Location = new Point(303, 680);
+            label26.Name = "label26";
+            label26.Size = new Size(23, 28);
+            label26.TabIndex = 36;
+            label26.Text = "0";
+            label26.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.BackColor = Color.DarkGreen;
+            label27.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label27.ForeColor = SystemColors.ButtonHighlight;
+            label27.Location = new Point(303, 606);
+            label27.Name = "label27";
+            label27.Size = new Size(23, 28);
+            label27.TabIndex = 35;
+            label27.Text = "0";
+            label27.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.BackColor = Color.DarkGreen;
+            label29.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label29.ForeColor = SystemColors.ButtonHighlight;
+            label29.Location = new Point(381, 501);
+            label29.Name = "label29";
+            label29.Size = new Size(79, 28);
+            label29.TabIndex = 37;
+            label29.Text = "kg/CO2";
+            label29.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.BackColor = Color.DarkGreen;
+            label30.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label30.ForeColor = SystemColors.ButtonHighlight;
+            label30.Location = new Point(381, 556);
+            label30.Name = "label30";
+            label30.Size = new Size(79, 28);
+            label30.TabIndex = 38;
+            label30.Text = "kg/CO2";
+            label30.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.BackColor = Color.DarkGreen;
+            label31.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label31.ForeColor = SystemColors.ButtonHighlight;
+            label31.Location = new Point(381, 680);
+            label31.Name = "label31";
+            label31.Size = new Size(79, 28);
+            label31.TabIndex = 40;
+            label31.Text = "kg/CO2";
+            label31.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.BackColor = Color.DarkGreen;
+            label32.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label32.ForeColor = SystemColors.ButtonHighlight;
+            label32.Location = new Point(381, 606);
+            label32.Name = "label32";
+            label32.Size = new Size(79, 28);
+            label32.TabIndex = 39;
+            label32.Text = "kg/CO2";
+            label32.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.YellowGreen;
+            button1.Location = new Point(244, 639);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 36);
+            button1.TabIndex = 41;
+            button1.Text = "Calculate";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.BackColor = Color.DarkGreen;
+            label33.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label33.ForeColor = SystemColors.ButtonHighlight;
+            label33.Location = new Point(381, 715);
+            label33.Name = "label33";
+            label33.Size = new Size(79, 28);
+            label33.TabIndex = 44;
+            label33.Text = "kg/CO2";
+            label33.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.BackColor = Color.DarkGreen;
+            label34.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label34.ForeColor = SystemColors.ButtonHighlight;
+            label34.Location = new Point(303, 715);
+            label34.Name = "label34";
+            label34.Size = new Size(23, 28);
+            label34.TabIndex = 43;
+            label34.Text = "0";
+            label34.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.BackColor = Color.DarkGreen;
+            label35.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label35.ForeColor = SystemColors.ButtonHighlight;
+            label35.Location = new Point(95, 715);
+            label35.Name = "label35";
+            label35.Size = new Size(164, 28);
+            label35.TabIndex = 42;
+            label35.Text = "Total Carbon Fuel";
+            label35.TextAlign = ContentAlignment.TopCenter;
             // 
             // CalculateEnergy
             // 
@@ -605,6 +814,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSeaGreen;
             ClientSize = new Size(1143, 750);
+            Controls.Add(label33);
+            Controls.Add(label34);
+            Controls.Add(label35);
+            Controls.Add(button1);
+            Controls.Add(label31);
+            Controls.Add(label32);
+            Controls.Add(label30);
+            Controls.Add(label29);
+            Controls.Add(label26);
+            Controls.Add(label27);
+            Controls.Add(label25);
+            Controls.Add(label28);
+            Controls.Add(label24);
+            Controls.Add(label23);
+            Controls.Add(label22);
             Controls.Add(btnCalculate);
             Controls.Add(label5);
             Controls.Add(label3);
@@ -622,12 +846,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             FuelCombustion.ResumeLayout(false);
             FuelCombustion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             Electricity.ResumeLayout(false);
             Electricity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -678,5 +902,20 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
+        private Label label22;
+        private Label label23;
+        private Label label24;
+        private Label label28;
+        private Label label25;
+        private Label label26;
+        private Label label27;
+        private Label label29;
+        private Label label30;
+        private Label label31;
+        private Label label32;
+        private Button button1;
+        private Label label33;
+        private Label label34;
+        private Label label35;
     }
 }
