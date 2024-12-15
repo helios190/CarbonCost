@@ -31,11 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculateTransport));
             label2 = new Label();
             pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
             label3 = new Label();
             label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -58,16 +56,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 16;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-2, 50);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(573, 427);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 14;
-            pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -103,13 +91,11 @@
             Controls.Add(label3);
             Controls.Add(pictureBox2);
             Controls.Add(label2);
-            Controls.Add(pictureBox1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "CalculateTransport";
             Text = "Calculate Transport";
             Load += CalculateTransport_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,7 +103,6 @@
         #endregion
         private Label label2;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
         private Label label3;
         private Label label5;
     }

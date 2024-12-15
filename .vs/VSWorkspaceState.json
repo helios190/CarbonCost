@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CarbonCost",
+    "\\CarbonCost\\CarbonCost"
   ],
-  "SelectedNode": "\\CarbonCost.sln",
+  "SelectedNode": "\\CarbonCost\\CarbonCost.sln",
   "PreviewInSolutionExplorer": false
 }
