@@ -74,6 +74,10 @@
             label9 = new Label();
             pictureBox3 = new PictureBox();
             btnCalculate = new Button();
+            pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            label22 = new Label();
+            label23 = new Label();
             label22 = new Label();
             label23 = new Label();
             label24 = new Label();
@@ -89,6 +93,11 @@
             label33 = new Label();
             label34 = new Label();
             label35 = new Label();
+            pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            label22 = new Label();
+            label23 = new Label();
+            pictureBox8 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl.SuspendLayout();
             Shipping.SuspendLayout();
@@ -100,6 +109,8 @@
             Electricity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -116,9 +127,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(89, 366);
+            label3.Location = new Point(84, 426);
             label3.Name = "label3";
-            label3.Size = new Size(428, 90);
+            label3.Size = new Size(466, 76);
             label3.TabIndex = 16;
             label3.Text = "Calculate your most recent \r\nCarbon Emission Now!";
             label3.TextAlign = ContentAlignment.TopCenter;
@@ -141,6 +152,7 @@
             tabControl.Controls.Add(Shipping);
             tabControl.Controls.Add(FuelCombustion);
             tabControl.Controls.Add(Electricity);
+            tabControl.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tabControl.Location = new Point(575, 1);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
@@ -188,11 +200,11 @@
             // 
             label12.AutoSize = true;
             label12.BackColor = Color.Ivory;
-            label12.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(173, 162);
+            label12.Font = new Font("Georgia", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(159, 166);
             label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
-            label12.Size = new Size(260, 45);
+            label12.Size = new Size(281, 38);
             label12.TabIndex = 45;
             label12.Text = "Shipping Habits";
             // 
@@ -246,7 +258,7 @@
             // 
             cbDistanceUnit.BackColor = Color.Honeydew;
             cbDistanceUnit.FormattingEnabled = true;
-            cbDistanceUnit.Location = new Point(196, 591);
+            cbDistanceUnit.Location = new Point(196, 587);
             cbDistanceUnit.Name = "cbDistanceUnit";
             cbDistanceUnit.Size = new Size(319, 33);
             cbDistanceUnit.TabIndex = 37;
@@ -256,7 +268,7 @@
             label14.AutoSize = true;
             label14.BackColor = Color.Ivory;
             label14.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label14.Location = new Point(113, 599);
+            label14.Location = new Point(113, 595);
             label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
             label14.Size = new Size(53, 25);
@@ -355,7 +367,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(48, 248);
+            pictureBox4.Location = new Point(26, 177);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(551, 538);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -373,7 +385,9 @@
             FuelCombustion.Controls.Add(label21);
             FuelCombustion.Controls.Add(txtValueFuel);
             FuelCombustion.Controls.Add(pictureBox6);
+            FuelCombustion.Controls.Add(label23);
             FuelCombustion.Controls.Add(pictureBox7);
+            FuelCombustion.Controls.Add(pictureBox8);
             FuelCombustion.Location = new Point(4, 34);
             FuelCombustion.Name = "FuelCombustion";
             FuelCombustion.Padding = new Padding(3);
@@ -385,11 +399,11 @@
             // 
             label18.AutoSize = true;
             label18.BackColor = Color.Ivory;
-            label18.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.Location = new Point(167, 86);
+            label18.Font = new Font("Georgia", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label18.Location = new Point(162, 227);
             label18.Margin = new Padding(4, 0, 4, 0);
             label18.Name = "label18";
-            label18.Size = new Size(273, 45);
+            label18.Size = new Size(298, 38);
             label18.TabIndex = 46;
             label18.Text = "Fuel Combustion";
             // 
@@ -397,7 +411,7 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label19.Location = new Point(98, 304);
+            label19.Location = new Point(132, 410);
             label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
             label19.Size = new Size(61, 25);
@@ -408,7 +422,7 @@
             // 
             cbFuelUnit.BackColor = Color.Honeydew;
             cbFuelUnit.FormattingEnabled = true;
-            cbFuelUnit.Location = new Point(215, 296);
+            cbFuelUnit.Location = new Point(200, 406);
             cbFuelUnit.Name = "cbFuelUnit";
             cbFuelUnit.Size = new Size(319, 33);
             cbFuelUnit.TabIndex = 45;
@@ -417,7 +431,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label20.Location = new Point(38, 217);
+            label20.Location = new Point(72, 335);
             label20.Margin = new Padding(4, 0, 4, 0);
             label20.Name = "label20";
             label20.Size = new Size(121, 25);
@@ -428,7 +442,7 @@
             // 
             cbSource.BackColor = Color.Honeydew;
             cbSource.FormattingEnabled = true;
-            cbSource.Location = new Point(215, 214);
+            cbSource.Location = new Point(200, 332);
             cbSource.Name = "cbSource";
             cbSource.Size = new Size(319, 33);
             cbSource.TabIndex = 43;
@@ -437,7 +451,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label21.Location = new Point(95, 382);
+            label21.Location = new Point(129, 486);
             label21.Margin = new Padding(4, 0, 4, 0);
             label21.Name = "label21";
             label21.Size = new Size(64, 25);
@@ -447,7 +461,7 @@
             // txtValueFuel
             // 
             txtValueFuel.BackColor = Color.Honeydew;
-            txtValueFuel.Location = new Point(215, 382);
+            txtValueFuel.Location = new Point(200, 483);
             txtValueFuel.Name = "txtValueFuel";
             txtValueFuel.Size = new Size(319, 31);
             txtValueFuel.TabIndex = 40;
@@ -485,6 +499,7 @@
             Electricity.Controls.Add(label7);
             Electricity.Controls.Add(label8);
             Electricity.Controls.Add(label9);
+            Electricity.Controls.Add(label22);
             Electricity.Controls.Add(pictureBox3);
             Electricity.Location = new Point(4, 34);
             Electricity.Name = "Electricity";
@@ -497,7 +512,7 @@
             // 
             cmbElectricityUnit.BackColor = Color.Honeydew;
             cmbElectricityUnit.FormattingEnabled = true;
-            cmbElectricityUnit.Location = new Point(176, 299);
+            cmbElectricityUnit.Location = new Point(185, 296);
             cmbElectricityUnit.Name = "cmbElectricityUnit";
             cmbElectricityUnit.Size = new Size(319, 33);
             cmbElectricityUnit.TabIndex = 33;
@@ -505,7 +520,7 @@
             // txtElectricityValue
             // 
             txtElectricityValue.BackColor = Color.Honeydew;
-            txtElectricityValue.Location = new Point(176, 367);
+            txtElectricityValue.Location = new Point(185, 352);
             txtElectricityValue.Name = "txtElectricityValue";
             txtElectricityValue.Size = new Size(319, 31);
             txtElectricityValue.TabIndex = 36;
@@ -514,7 +529,7 @@
             // 
             cmbState.BackColor = Color.Honeydew;
             cmbState.FormattingEnabled = true;
-            cmbState.Location = new Point(176, 488);
+            cmbState.Location = new Point(185, 461);
             cmbState.Name = "cmbState";
             cmbState.Size = new Size(319, 33);
             cmbState.TabIndex = 35;
@@ -523,7 +538,7 @@
             // 
             cmbCountry.BackColor = Color.Honeydew;
             cmbCountry.FormattingEnabled = true;
-            cmbCountry.Location = new Point(176, 424);
+            cmbCountry.Location = new Point(184, 405);
             cmbCountry.Name = "cmbCountry";
             cmbCountry.Size = new Size(319, 33);
             cmbCountry.TabIndex = 34;
@@ -531,7 +546,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(224, 92);
+            pictureBox2.Location = new Point(221, 101);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(150, 75);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -541,11 +556,12 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(110, 185);
+            label2.BackColor = Color.LightBlue;
+            label2.Font = new Font("Georgia", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(86, 198);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(375, 45);
+            label2.Size = new Size(417, 38);
             label2.TabIndex = 30;
             label2.Text = "Electricity Consumption";
             // 
@@ -553,7 +569,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.Location = new Point(78, 367);
+            label6.Location = new Point(91, 358);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(64, 25);
@@ -564,7 +580,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label7.Location = new Point(86, 302);
+            label7.Location = new Point(102, 303);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(53, 25);
@@ -575,7 +591,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label8.Location = new Point(53, 427);
+            label8.Location = new Point(69, 413);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new Size(86, 25);
@@ -586,7 +602,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label9.Location = new Point(78, 491);
+            label9.Location = new Point(94, 461);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
             label9.Size = new Size(61, 25);
@@ -596,7 +612,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(0, 463);
+            pictureBox3.Location = new Point(-3, 441);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(574, 291);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -606,7 +622,7 @@
             // btnCalculate
             // 
             btnCalculate.BackColor = Color.YellowGreen;
-            btnCalculate.Location = new Point(244, 458);
+            btnCalculate.Location = new Point(220, 671);
             btnCalculate.Margin = new Padding(4, 5, 4, 5);
             btnCalculate.Name = "btnCalculate";
             btnCalculate.Size = new Size(107, 36);
@@ -784,29 +800,61 @@
             // 
             // label34
             // 
-            label34.AutoSize = true;
-            label34.BackColor = Color.DarkGreen;
-            label34.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label34.ForeColor = SystemColors.ButtonHighlight;
-            label34.Location = new Point(303, 715);
-            label34.Name = "label34";
-            label34.Size = new Size(23, 28);
-            label34.TabIndex = 43;
-            label34.Text = "0";
-            label34.TextAlign = ContentAlignment.TopCenter;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(119, 458);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(377, 245);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 47;
+            pictureBox6.TabStop = false;
             // 
             // label35
             // 
-            label35.AutoSize = true;
-            label35.BackColor = Color.DarkGreen;
-            label35.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label35.ForeColor = SystemColors.ButtonHighlight;
-            label35.Location = new Point(95, 715);
-            label35.Name = "label35";
-            label35.Size = new Size(164, 28);
-            label35.TabIndex = 42;
-            label35.Text = "Total Carbon Fuel";
-            label35.TextAlign = ContentAlignment.TopCenter;
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(-18, 3);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(656, 169);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 30;
+            pictureBox7.TabStop = false;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.BackColor = Color.DarkCyan;
+            label22.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label22.ForeColor = SystemColors.ButtonHighlight;
+            label22.Location = new Point(62, 258);
+            label22.Name = "label22";
+            label22.RightToLeft = RightToLeft.Yes;
+            label22.Size = new Size(457, 280);
+            label22.TabIndex = 37;
+            label22.Text = resources.GetString("label22.Text");
+            label22.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.BackColor = Color.DarkGreen;
+            label23.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label23.ForeColor = SystemColors.ButtonHighlight;
+            label23.Location = new Point(60, 296);
+            label23.Name = "label23";
+            label23.RightToLeft = RightToLeft.Yes;
+            label23.Size = new Size(472, 252);
+            label23.TabIndex = 48;
+            label23.Text = resources.GetString("label23.Text");
+            label23.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(-127, -23);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(798, 272);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 49;
+            pictureBox8.TabStop = false;
             // 
             // CalculateEnergy
             // 
@@ -852,6 +900,8 @@
             Electricity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -902,20 +952,5 @@
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private PictureBox pictureBox7;
-        private Label label22;
-        private Label label23;
-        private Label label24;
-        private Label label28;
-        private Label label25;
-        private Label label26;
-        private Label label27;
-        private Label label29;
-        private Label label30;
-        private Label label31;
-        private Label label32;
-        private Button button1;
-        private Label label33;
-        private Label label34;
-        private Label label35;
     }
 }
