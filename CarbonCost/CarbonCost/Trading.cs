@@ -506,5 +506,69 @@ namespace CarbonCost
         {
 
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Check if any row is selected
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a row to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Get the transaction_id from the selected row
+            int transactionId;
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+            if (!int.TryParse(selectedRow.Cells["transaction_id"].Value.ToString(), out transactionId))
+            {
+                MessageBox.Show("Invalid transaction ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Confirm the deletion with the user
+            var confirmResult = MessageBox.Show("Are you sure you want to delete this transaction?",
+                                                "Confirm Delete",
+                                                MessageBoxButtons.YesNo,
+                                                MessageBoxIcon.Question);
+            if (confirmResult != DialogResult.Yes)
+            {
+                return;
+            }
+
+            // Execute DELETE query to remove the row from the database
+            try
+            {
+                using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
+                {
+                    conn.Open();
+                    string deleteQuery = "DELETE FROM transactions WHERE transaction_id = @transactionId";
+
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(deleteQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@transactionId", transactionId);
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Transaction deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Transaction not found or already deleted.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+
+                // Refresh the DataGridView after deletion
+                load_Click(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while deleting the transaction: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
     }
 }

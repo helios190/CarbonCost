@@ -10,14 +10,14 @@ namespace CarbonCost
     // Inheritance: Inherits shared logic from EmissionCalculatorBase.
     public class ShippingCalculator : EmissionCalculatorBase
     {
-        private readonly APIServices _apiServices;
+        private readonly IAPIServices _apiServices;
         private double _weight;
         private double _distance;
         private string _transport;
         private string _weightUnit;
         private string _distanceUnit;
 
-        public ShippingCalculator(APIServices apiServices, double weight, double distance, string transport, string weightUnit, string distanceUnit)
+        public ShippingCalculator(IAPIServices apiServices, double weight, double distance, string transport, string weightUnit, string distanceUnit)
         {
             _apiServices = apiServices;
             _weight = weight;

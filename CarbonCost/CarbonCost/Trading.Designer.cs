@@ -51,6 +51,7 @@
             label13 = new Label();
             pictureBox1 = new PictureBox();
             label23 = new Label();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -340,11 +341,26 @@
             label23.Text = "\r\n\r\n                                                                                                      \r\n                                                                                         ";
             label23.TextAlign = ContentAlignment.TopCenter;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Brown;
+            button1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ButtonFace;
+            button1.Location = new Point(885, 391);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 38);
+            button1.TabIndex = 51;
+            button1.Text = "Delete";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Trading
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1021, 748);
+            Controls.Add(button1);
             Controls.Add(label13);
             Controls.Add(label9);
             Controls.Add(label10);
@@ -403,5 +419,6 @@
         private Label label13;
         private PictureBox pictureBox1;
         private Label label23;
+        private Button button1;
     }
 }

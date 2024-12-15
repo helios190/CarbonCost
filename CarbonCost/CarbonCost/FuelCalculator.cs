@@ -10,12 +10,12 @@ namespace CarbonCost
     // Inheritance: Inherits shared logic from EmissionCalculatorBase.
     public class FuelCalculator : EmissionCalculatorBase
     {
-        private readonly APIServices _apiServices;
+        private readonly IAPIServices _apiServices;
         private double _quantity;
         private string _fuelType;
         private string _unit;
 
-        public FuelCalculator(APIServices apiServices, string fuelType, double quantity, string unit)
+        public FuelCalculator(IAPIServices apiServices, string fuelType, double quantity, string unit)
         {
             _apiServices = apiServices;
             _fuelType = fuelType;
