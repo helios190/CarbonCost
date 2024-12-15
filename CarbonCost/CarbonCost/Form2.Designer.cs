@@ -102,6 +102,7 @@
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             pictureBox2.UseWaitCursor = true;
+            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox3
             // 

@@ -50,6 +50,22 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[3.6.4, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.6.4, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
             "NUnit": {
               "target": "Package",
               "version": "[4.2.2, )"
@@ -60,7 +76,7 @@
             },
             "Npgsql": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[9.0.2, )"
             }
           },
           "imports": [

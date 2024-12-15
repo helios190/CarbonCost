@@ -1,0 +1,6 @@
+C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCostTest\obj\Debug\net8.0\CarbonCostTest.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCostTest\obj\Debug\net8.0\CarbonCostTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCostTest\obj\Debug\net8.0\CarbonCostTest.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCostTest\obj\Debug\net8.0\CarbonCostTest.AssemblyInfo.cs
+C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCostTest\obj\Debug\net8.0\CarbonCostTest.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\CarbonCost2\CarbonCost\CarbonCostTest\obj\Debug\net8.0\CarbonCostTest.sourcelink.json

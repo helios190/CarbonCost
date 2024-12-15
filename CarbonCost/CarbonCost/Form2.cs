@@ -27,7 +27,7 @@ namespace CarbonCost
         private void button1_Click(object sender, EventArgs e)
         {
             string apiKey = "XcQBBciF5dVI0pa3B75bEg";  // Set your actual API key here
-            CalculateEnergy dashboard = new CalculateEnergy(apiKey);
+            CalculateEnergy dashboard = new CalculateEnergy(apiKey, companyId, companyName);
             dashboard.Show();
             this.Hide();
         }
@@ -45,6 +45,11 @@ namespace CarbonCost
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

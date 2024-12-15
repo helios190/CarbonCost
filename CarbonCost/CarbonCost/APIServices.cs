@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 
 namespace CarbonCost
 {
-    public class APIServices
+    public class APIServices : IAPIServices
     {
         private readonly HttpClient _httpClient;
 
