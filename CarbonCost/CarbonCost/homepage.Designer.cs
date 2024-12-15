@@ -237,7 +237,7 @@
             Controls.Add(pictureBox2);
             Margin = new Padding(4, 5, 4, 5);
             Name = "homepage";
-            Text = "Home Page";
+            Text = "Login Page";
             Load += homepage_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
